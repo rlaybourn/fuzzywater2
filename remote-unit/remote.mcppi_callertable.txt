@@ -1,0 +1,28 @@
+main
+	__CC2DW
+	init
+		UART1_Init
+	readanalog
+		Longword2Double
+			NRM4032
+				RES032
+				SETFUN32
+				FIXSIGN32
+				SETFOV32
+		Div_32x32_FP
+			SETFDZ32
+			RES032
+			SETFOV32
+			SETFUN32
+		Double2Int
+			SETIOV3224
+	processrequest
+		Serial_display_value
+			Div_16x16_U
+			UART1_Write
+interrupt
+	strlen
+	strncpy
+	atoi
+		isdigit
+		Mul_16x16_U
