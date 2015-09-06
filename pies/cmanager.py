@@ -1,3 +1,10 @@
+################################################################################################
+# Author: Richard Laybourn 
+# Date  : july 5th 2015 
+# summary: This file implements an object to manage communications with remote slave units 
+# 
+################################################################################################
+
 from xbee import XBee
 import serial
 import time
