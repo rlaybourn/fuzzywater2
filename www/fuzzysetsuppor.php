@@ -1,4 +1,4 @@
-<?php
+<?php //functions to support  fuzzy sets manipulation
 
 	function checkform()
 	{

@@ -1,3 +1,12 @@
+################################################################################################
+# Author: Richard Laybourn 
+# date  : july 10th 2015 
+# summary: This file implements a script to prosses logged data and sent and apporpriate irrigation command to slave units 
+# 
+################################################################################################
+
+
+
 import csv
 import time
 import serial

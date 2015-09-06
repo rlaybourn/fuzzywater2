@@ -1,4 +1,4 @@
-<?php
+<?php //functions to support  manage nodes page
 function listnodes($basepath)
 {
 	$nodlistf = fopen($basepath . "nodelist", 'r') or die("unable open nodelist");                      # open list of nodes file

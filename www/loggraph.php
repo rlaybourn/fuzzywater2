@@ -1,3 +1,5 @@
+<!-- displays graph of logged data -->
+
 <?php session_start(); /* Starts the session */
 
 if(!isset($_SESSION['UserData']['Username'])){
@@ -60,7 +62,7 @@ include 'paths.php';
 
 
 
-	function drawChart() {                                    
+	function drawChart() {    //draw chart with setpoint                                
 		var data= google.visualization.arrayToDataTable([
 				['time','level','set point'],
 				<?php
@@ -81,7 +83,7 @@ include 'paths.php';
 			'height':100},
                 });
 
-        var chart2 = new google.visualization.ChartWrapper({
+        var chart2 = new google.visualization.ChartWrapper({//set graph display preferenes
         'chartType': 'LineChart',
         'containerId': 'chart_div',
         'options':{
@@ -99,7 +101,7 @@ include 'paths.php';
 
     	}
 
-        function drawChartnsp() {
+        function drawChartnsp() { //draw graph without setpoint data
                 var data= google.visualization.arrayToDataTable([
                                 ['time','level'],
                                 <?php
@@ -139,7 +141,7 @@ include 'paths.php';
     </script>
   </head>
     <body>
-    <div class="table">
+    <div class="table"> <!-- display menu-->
     <div class=bar>
     	<div class="item">
     		<a href="logout.php">Logout    </a>
@@ -163,7 +165,7 @@ include 'paths.php';
     </div>
     </div>
 
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">   
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"><!--postback form-->   
 Node: 
  <select name="nodenum" class="nomal" id="nodenum">                                                 
 <?php                                                                                   #created selection box  
@@ -208,7 +210,7 @@ fclose($nodlistf);
 
 
  
-
+<!-- buttons to run javascript graphing functions-->
 <button class="nomal" onclick="drawChartnsp();" value="nsp">Remove set point</button><button class="nomal" onclick="drawChart();" value="nsp">with set point</button>
 
 

@@ -1,3 +1,12 @@
+################################################################################################
+# Author: Richard Laybourn 
+# Date  : July 22nd 2015 
+# summary: writes update coeffs back into nodelist file 
+##########################################################################################
+
+
+
+
 #!/usr/bin/python
 import cgi
 import cgitb; cgitb.enable()
