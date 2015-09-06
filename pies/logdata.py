@@ -1,3 +1,9 @@
+################################################################################################
+# Author: Richard Laybourn 
+# Date  : July 1st 2015 
+# summary:  This script collects data from the nodes in the nodelist file and creates a log of values 
+# 
+################################################################################################
 
 import numpy as np
 import sys
